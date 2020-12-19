@@ -17,11 +17,11 @@ console.log(createFullName("Joe", "Schmoe"))
 // a.	Using setTimeout, write an inline, anonymous (has no named assigned to it) arrow function in the callback parameter position. The function should alert ‘Time is up!’. Choose whatever length of time you want for the timeout.
 console.log("3.")
 
-//setTimeout(() => { alert('Time is Up!'); }, 1000);
+setTimeout(() => { alert('Time is Up!'); }, 1000);
 
 // b.	Write an arrow function named askAreWeThereYet that alerts ‘Are we there yet?’. Using setInterval, pass askAreWeThereYet into the callback parameter position. Choose whatever length of time you want for the interval.
 
-//let areWeThereYet = setInterval(() => alert('Are we there yet?'), 4000);
+let areWeThereYet = setInterval(() => alert('Are we there yet?'), 4000);
 
 // 4.	In this step you are going to write a function that takes a callback to better understand how callbacks work.
 // a.	Write a function named processSplicedValue that takes 3 parameters – 
@@ -34,12 +34,13 @@ console.log("3.")
 
 console.log("4.abcd")
 
-var collegeFriends = ["Jessi", "Indra", "Maria", "Roy", "Debbie", "KD", "Kevin"];
+
 
 function processSplicedValue(myArray, index, callback) {
     let removedElement = myArray.splice(index, 1);
     callback(removedElement);
 }
+
 processSplicedValue(collegeFriends, 3, console.log)
 //Good- don't change
 
